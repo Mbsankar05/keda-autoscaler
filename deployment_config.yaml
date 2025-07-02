@@ -1,0 +1,18 @@
+eployment_name: my-app
+namespace: default
+image: nginxdemos/hello
+tag: latest
+cpu_request: "100m"
+cpu_limit: "200m"
+memory_request: "128Mi"
+memory_limit: "256Mi"
+port: 80
+min_replicas: 0
+max_replicas: 5
+scaler_type: rabbitmq
+scaler_config:
+  queueName: my-queue
+  queueLength: "5"
+  host: "rabbitmq.default.svc.cluster.local"
+env_vars:
+  APP_ENV: production
