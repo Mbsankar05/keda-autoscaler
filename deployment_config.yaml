@@ -1,4 +1,4 @@
-eployment_name: my-app
+deployment_name: my-app
 namespace: default
 image: nginxdemos/hello
 tag: latest
