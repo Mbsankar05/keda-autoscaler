@@ -110,17 +110,7 @@ python k8s_automation.py --action health --deployment my-app --namespace default
    - Send messages to RabbitMQ queue (`my-queue`) to trigger scaling.
    - Monitor replicas: `kubectl get pods -n default -w`.
 
-## Error Handling
-- Validates configuration files for required fields.
-- Checks for Helm and KEDA installation issues.
-- Handles Kubernetes API errors with clear messages.
-- Exits gracefully on failures with actionable feedback.
 
-## Best Practices
-- **Modular Design**: Functions are reusable for different configurations.
-- **Resource Limits**: Enforces CPU/memory limits for efficiency.
-- **KEDA Integration**: Supports scaling to zero for cost savings.
-- **Documentation**: Inline comments and this README for clarity.
 
 ## Repository Structure
 - `k8s_automation.py`: Main Python CLI script.
@@ -177,7 +167,3 @@ Upload to a public GitHub repository with the above files. Ensure `requirements.
 kubernetes==30.1.0
 pyyaml==6.0.1
 ```
-
-For further assistance, refer to:
-- KEDA Documentation: https://keda.sh
-- Kubernetes Python Client: https://github.com/kubernetes-client/python
